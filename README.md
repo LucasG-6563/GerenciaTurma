@@ -11,3 +11,10 @@ Gerenciador de turmas de uma escola
 - Removido as mensagens de teste das telas principais
 - Removido a necessidade de colocar o código para a inserção de dados. O código é gerado automaticamente pelo BD.
 
+===Versão 0.4
+Adicionado os arquivos referentes a tabela Professor:
+- Tela para manipulação da tela
+- Arquivos de testes (Incluir, alterar, listar e deletar)
+- Modelo de tabela para a tabela Professor
+
+Além de ter sido retirado códigos que não estavam sendo utilizados.
