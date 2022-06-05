@@ -16,19 +16,14 @@ public class DisciplinaDAO {
 
 		BD banco = new BD();
 		banco.getConnection();
-		String sql = "insert into Disciplina values(?, ?, ?)";
+		String sql = "insert into Disciplina(nome, area) values(?, ?)";
 
 		try {
 			banco.st = banco.con.prepareStatement(sql);
-			banco.st.setInt(1, d.getCod());
-			banco.st.setString(2, d.getNome());
-			banco.st.setString(3, d.getArea());
-			boolean confirma = banco.st.execute();
-			System.out.println(confirma);
-			if (!confirma) {
-				System.out.println("Inserção feita com sucesso em Disciplina.");
-			} else
-				System.out.println("Não foi possível fazer a inserção");
+			banco.st.setString(1, d.getNome());
+			banco.st.setString(2, d.getArea());
+			banco.st.execute();
+
 		} catch (SQLException e) {
 			System.out.println(e);
 		} finally {
@@ -52,11 +47,7 @@ public class DisciplinaDAO {
 			banco.st.setInt(3, d.getCod());
 			banco.st.setString(1, d.getNome());
 			banco.st.setString(2, d.getArea());
-			boolean confirma = banco.st.execute();
-			if (!confirma) {
-				System.out.println("Alteração feita com sucesso em Disciplina.");
-			} else
-				System.out.println("Não foi possível fazer a Alteração");
+			banco.st.execute();
 		} catch (SQLException e) {
 			System.out.println(e);
 		} finally {
@@ -74,13 +65,13 @@ public class DisciplinaDAO {
 		bd.getConnection();
 		Disciplina d;
 		ArrayList<Disciplina> lista = new ArrayList<Disciplina>();
-		String sql = "select * from Disciplina";
+		String sql = "select * from disciplina";
 		try {
 			bd.st = bd.con.prepareStatement(sql);
 			bd.rs = bd.st.executeQuery();
 			while (bd.rs.next()) { // enquanto existir próximo
 				d = new Disciplina();
-				d.setCod(Integer.parseInt(bd.rs.getString("codigo")));
+				d.setCod(Integer.parseInt(bd.rs.getString("cod")));
 				d.setNome(bd.rs.getString("nome"));
 				d.setArea(bd.rs.getString("area"));
 				lista.add(d);
@@ -107,11 +98,7 @@ public class DisciplinaDAO {
 		try {
 			banco.st = banco.con.prepareStatement(sql);
 			banco.st.setInt(1, cod);
-			boolean confirma = banco.st.execute();
-			if (!confirma) {
-				System.out.println("Disciplina deletada com sucesso.");
-			} else
-				System.out.println("Não foi possível deletar a disciplina.");
+			banco.st.execute();
 		} catch (SQLException e) {
 			System.out.println(e);
 		} finally {

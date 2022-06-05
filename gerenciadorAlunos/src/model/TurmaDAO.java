@@ -15,19 +15,13 @@ public class TurmaDAO {
 
 		BD banco = new BD();
 		banco.getConnection();
-		String sql = "insert into Turma values(?, ?, ?)";
+		String sql = "insert into Turma(serie, periodo) values(?, ?)";
 
 		try {
 			banco.st = banco.con.prepareStatement(sql);
-			banco.st.setInt(1, t.getCod());
-			banco.st.setString(2, t.getSerie());
-			banco.st.setString(3, t.getPeriodo());
-			boolean confirma = banco.st.execute();
-			System.out.println(confirma);
-			if (!confirma) {
-				System.out.println("Inserção feita com sucesso em Turma.");
-			} else
-				System.out.println("Não foi possível fazer a inserção");
+			banco.st.setString(1, t.getSerie());
+			banco.st.setString(2, t.getPeriodo());
+			banco.st.execute();
 		} catch (SQLException e) {
 			System.out.println(e);
 		} finally {
@@ -50,11 +44,7 @@ public class TurmaDAO {
 			banco.st.setInt(3, t.getCod());
 			banco.st.setString(1, t.getSerie());
 			banco.st.setString(2, t.getPeriodo());
-			boolean confirma = banco.st.execute();
-			if (confirma) {
-				System.out.println("Alteração feita com sucesso em Turma.");
-			} else
-				System.out.println("Não foi possível fazer a Alteração");
+			banco.st.execute();
 		} catch (SQLException e) {
 			System.out.println(e);
 		} finally {
@@ -103,11 +93,7 @@ public class TurmaDAO {
 		try {
 			banco.st = banco.con.prepareStatement(sql);
 			banco.st.setInt(1, cod);
-			boolean confirma = banco.st.execute();
-			if (confirma) {
-				System.out.println("Turma deletada com sucesso.");
-			} else
-				System.out.println("Não foi possível deletar a turma.");
+			banco.st.execute();
 		} catch (SQLException e) {
 			System.out.println(e);
 		} finally {

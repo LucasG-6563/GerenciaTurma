@@ -12,13 +12,12 @@ import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.JTableHeader;
 
 import model.Disciplina;
 import model.DisciplinaDAO;
 import model.TabelaDisciplina;
 import javax.swing.JScrollPane;
+import java.awt.Font;
 
 public class GuiDisciplina {
 
@@ -51,6 +50,7 @@ public class GuiDisciplina {
 	public GuiDisciplina() {
 		this.modeloTabela = new TabelaDisciplina();
 		this.tbDisciplinas = new JTable(modeloTabela);
+		tbDisciplinas.setFont(new Font("Arial", Font.PLAIN, 20));
 		initialize();
 	}
 
@@ -65,42 +65,48 @@ public class GuiDisciplina {
 		frmDisciplina.getContentPane().setLayout(null);
 		
 		txtCodigo = new JTextField();
-		txtCodigo.setBounds(68, 25, 61, 20);
+		txtCodigo.setFont(new Font("Arial", Font.PLAIN, 20));
+		txtCodigo.setBounds(126, 26, 150, 20);
 		frmDisciplina.getContentPane().add(txtCodigo);
 		txtCodigo.setColumns(10);
 		
 		txtNome = new JTextField();
-		txtNome.setBounds(68, 75, 174, 20);
+		txtNome.setFont(new Font("Arial", Font.PLAIN, 20));
+		txtNome.setBounds(126, 78, 477, 36);
 		frmDisciplina.getContentPane().add(txtNome);
 		txtNome.setColumns(10);
 		
 		txtArea = new JTextField();
-		txtArea.setBounds(68, 125, 120, 20);
+		txtArea.setFont(new Font("Arial", Font.PLAIN, 20));
+		txtArea.setBounds(126, 150, 477, 36);
 		frmDisciplina.getContentPane().add(txtArea);
 		txtArea.setColumns(10);
 		
 		JLabel lblNewLabel = new JLabel("C\u00F3digo");
+		lblNewLabel.setFont(new Font("Arial", Font.PLAIN, 20));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setBounds(10, 28, 48, 14);
+		lblNewLabel.setBounds(10, 28, 150, 20);
 		frmDisciplina.getContentPane().add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Nome");
+		lblNewLabel_1.setFont(new Font("Arial", Font.PLAIN, 20));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setBounds(10, 78, 48, 14);
+		lblNewLabel_1.setBounds(10, 86, 150, 20);
 		frmDisciplina.getContentPane().add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("\u00C1rea");
+		lblNewLabel_2.setFont(new Font("Arial", Font.PLAIN, 20));
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_2.setBounds(10, 128, 48, 14);
+		lblNewLabel_2.setBounds(34, 161, 92, 14);
 		frmDisciplina.getContentPane().add(lblNewLabel_2);
 		
 		JButton btnInserir = new JButton("Inserir");
+		btnInserir.setFont(new Font("Arial", Font.PLAIN, 26));
 		btnInserir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Disciplina d = new Disciplina();
 				DisciplinaDAO dDAO = new DisciplinaDAO();
 				
-				d.setCod(Integer.parseInt(txtCodigo.getText()));
 				d.setNome(txtNome.getText());
 				d.setArea(txtArea.getText());
 				
@@ -109,10 +115,11 @@ public class GuiDisciplina {
 				JOptionPane.showMessageDialog(btnInserir, "Disciplina inserida com sucesso");
 			}
 		});
-		btnInserir.setBounds(10, 175, 116, 67);
+		btnInserir.setBounds(10, 260, 296, 205);
 		frmDisciplina.getContentPane().add(btnInserir);
 		
 		JButton btnListar = new JButton("Listar");
+		btnListar.setFont(new Font("Arial", Font.PLAIN, 26));
 		btnListar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -134,10 +141,11 @@ public class GuiDisciplina {
 				
 			}
 		});
-		btnListar.setBounds(10, 243, 116, 67);
+		btnListar.setBounds(10, 476, 296, 194);
 		frmDisciplina.getContentPane().add(btnListar);
 		
 		JButton btnAlterar = new JButton("Alterar");
+		btnAlterar.setFont(new Font("Arial", Font.PLAIN, 26));
 		btnAlterar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Disciplina d = new Disciplina();
@@ -151,10 +159,11 @@ public class GuiDisciplina {
 				JOptionPane.showMessageDialog(btnInserir, "Dados da disciplina alterado com sucesso");
 			}
 		});
-		btnAlterar.setBounds(126, 175, 116, 67);
+		btnAlterar.setBounds(316, 260, 287, 205);
 		frmDisciplina.getContentPane().add(btnAlterar);
 		
 		JButton btnDeletar = new JButton("Deletar");
+		btnDeletar.setFont(new Font("Arial", Font.PLAIN, 26));
 		btnDeletar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				DisciplinaDAO dDAO = new DisciplinaDAO();
@@ -163,11 +172,11 @@ public class GuiDisciplina {
 				JOptionPane.showMessageDialog(btnInserir, "Disciplina deletada com sucesso");
 			}
 		});
-		btnDeletar.setBounds(126, 243, 116, 67);
+		btnDeletar.setBounds(316, 476, 287, 194);
 		frmDisciplina.getContentPane().add(btnDeletar);
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(252, 16, 262, 294);
+		scrollPane.setBounds(613, 11, 641, 659);
 		frmDisciplina.getContentPane().add(scrollPane);
 		scrollPane.setViewportView(tbDisciplinas);
 	}
