@@ -4,7 +4,7 @@ Gerenciador de turmas de uma escola
 
 ===Versão 0.4
 Adicionado os arquivos referentes a tabela Professor:
-- Tela para manipulação da tela
+- Tela para manipulação da tabela Professor (GuiProfessor)
 - Arquivos de testes (Incluir, alterar, listar e deletar)
 - Modelo de tabela para a tabela Professor
 
