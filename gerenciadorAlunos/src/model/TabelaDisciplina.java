@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import javax.swing.table.AbstractTableModel;
 
+@SuppressWarnings("serial")
 public class TabelaDisciplina extends AbstractTableModel{
 
 	private ArrayList<Disciplina> tabela;

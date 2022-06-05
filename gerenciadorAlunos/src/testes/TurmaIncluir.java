@@ -13,7 +13,6 @@ public class TurmaIncluir {
 		Turma t = new Turma();
 		TurmaDAO tDAO = new TurmaDAO();
 		
-		t.setCod(Integer.parseInt(JOptionPane.showInputDialog("Digite o código da turma.")));
 		t.setSerie(JOptionPane.showInputDialog("Digite nome da série."));
 		t.setPeriodo(JOptionPane.showInputDialog("Digite o período que se passa a série."));
 		

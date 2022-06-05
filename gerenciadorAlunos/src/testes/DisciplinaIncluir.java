@@ -13,7 +13,6 @@ public class DisciplinaIncluir {
 		Disciplina d = new Disciplina();
 		DisciplinaDAO dDAO = new DisciplinaDAO();
 		
-		d.setCod(Integer.parseInt(JOptionPane.showInputDialog("Digite o código da disciplina")));
 		d.setNome(JOptionPane.showInputDialog("Digite o nome da disciplina"));
 		d.setArea(JOptionPane.showInputDialog("Digite a área da disciplina"));
 		

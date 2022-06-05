@@ -1,6 +1,5 @@
 package view;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -10,11 +9,8 @@ import javax.swing.border.EmptyBorder;
 
 import classes.Usuario;
 
-import javax.swing.BoxLayout;
-import java.awt.FlowLayout;
+
 import javax.swing.JButton;
-import java.awt.GridLayout;
-import java.awt.Window;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
@@ -26,6 +22,10 @@ import java.awt.event.MouseEvent;
 
 public class TelaLogin extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JPasswordField txtPasswordField;
 
@@ -77,6 +77,7 @@ public class TelaLogin extends JFrame {
 
 		JButton btnEntrar = new JButton("Entrar");
 		btnEntrar.addActionListener(new ActionListener() {
+			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent e) {
 				Usuario usuario = new Usuario();
 				if (usuario.verificaUser(txtUserField.getText(), txtPasswordField.getText())) {
