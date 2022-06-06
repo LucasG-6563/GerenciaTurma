@@ -3,12 +3,16 @@ Gerenciador de turmas de uma escola
 *Necessário instalar o WindowBuilder no eclipse para utilizar as telas
 
 ===Verção 0.5
-*Adição do manipulador do aluno
+
+Adição do manipulador do aluno
+
 - GuiAluno
 - Classe Aluno
 - Classe AlunoDAO
 - Classe TabelaAluno
-*Adição do manipulador Professor_Disciplina
+
+Adição do manipulador Professor_Disciplina
+
 - GuiProfessor_Disciplina
 - Classe Professor_Disciplina
 - Classe Professor_DisciplinaDAO
