@@ -2,6 +2,15 @@
 Gerenciador de turmas de uma escola
 *Necessário instalar o WindowBuilder no eclipse para utilizar as telas
 
+===Verção 0.7
+
+Adicionado Manipulador da Relação
+
+- Classes Relacao, RelacaoDAO, tabelaRelacao
+- Classe TabelaProfessor_DisciplinaNome
+
+Adicionado o comando de listar apenas o nome para o professor e disciplina
+
 ===Verção 0.6
 
 Adição do Manipulador Aluno_Turma
