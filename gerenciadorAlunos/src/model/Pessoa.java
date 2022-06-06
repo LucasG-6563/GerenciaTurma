@@ -27,6 +27,12 @@ public abstract class Pessoa {
 	public Date getDataNasc() {
 		return dataNasc;
 	}
+	
+	/**
+	 * Set dataNasc de uma String
+	 * @param dataNasc - Data de nascimento em String no formato yyyy-MM-dd
+	 * @throws ParseException - Joga uma mensagem caso de erro na conversão de String para Date
+	 */
 	public void setDataNasc(String dataNasc) throws ParseException {
 		this.dataNasc = Date.valueOf(dataNasc);
 	}
