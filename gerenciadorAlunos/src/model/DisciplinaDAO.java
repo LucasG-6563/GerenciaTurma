@@ -84,6 +84,30 @@ public class DisciplinaDAO {
 			bd.close();
 		}
 	}
+	
+	/**
+	 * Lista o nome da disciplina com o respectivo código
+	 * @param cod - Código da disciplina.
+	 * @return - Nome da disciplina
+	 */
+	public String listarDisciplina(int cod) {
+		BD bd = new BD();
+		bd.getConnection();
+		String nome=null;
+		String sql="Select nome from disciplina where cod = ?";
+		try {
+			bd.st = bd.con.prepareStatement(sql);
+			bd.st.setInt(1, cod);
+			bd.rs = bd.st.executeQuery();
+			bd.rs.next();
+			nome = bd.rs.getString("nome");
+		}catch(SQLException ex) {
+			System.out.println(ex);
+		}finally {
+			bd.close();
+		}
+		return nome;
+	}
 
 	/**
 	 * Deletar os dados da tabela que possuem um código específicado

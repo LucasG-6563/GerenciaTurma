@@ -82,6 +82,29 @@ public class TurmaDAO {
 	}
 	
 	/**
+	 * Lista o serie da turma com o respectivo código
+	 * @param cod - Código da turma.
+	 * @return - Nome da turma
+	 */
+	public String listarTurma(int cod) {
+		BD bd = new BD();
+		bd.getConnection();
+		String nome=null;
+		String sql="Select serie from turma where cod = ?";
+		try {
+			bd.st = bd.con.prepareStatement(sql);
+			bd.st.setInt(1, cod);
+			bd.rs = bd.st.executeQuery();
+			nome = bd.rs.getString("serie");
+		}catch(SQLException ex) {
+			System.out.println(ex);
+		}finally {
+			bd.close();
+		}
+		return nome;
+	}
+	
+	/**
 	 * Deletar os dados da tabela que possuem um código específicado
 	 * @param cod - código da turma que será deletada.
 	 */

@@ -97,6 +97,30 @@ public class ProfessorDAO {
 	}
 	
 	/**
+	 * Lista o nome do professor com o respectivo ID
+	 * @param id - Identificador do professor
+	 * @return - Nome do professor
+	 */
+	public String listarNomeProfessor(int id) {
+		BD bd = new BD();
+		bd.getConnection();
+		String nome=null;
+		String sql="Select nome from professor where idProfessor = ?";
+		try {
+			bd.st = bd.con.prepareStatement(sql);
+			bd.st.setInt(1, id);
+			bd.rs = bd.st.executeQuery();
+			bd.rs.next();
+			nome = bd.rs.getString("nome");
+		}catch(SQLException ex) {
+			System.out.println(ex);
+		}finally {
+			bd.close();
+		}
+		return nome;
+	}
+	
+	/**
 	 * Deletar os dados da tabela que possuem um código específicado
 	 * @param cod - código do Professor que será deletado.
 	 */
