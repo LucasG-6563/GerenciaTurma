@@ -2,6 +2,10 @@
 Gerenciador de turmas de uma escola
 *Necessário instalar o WindowBuilder no eclipse para utilizar as telas
 
+**Verção 0.7.5
+
+***Alteração do layout da Tela Principal e correção de bugs das telas GuiTurma e GuiDisciplina
+
 **Verção 0.7
 
 ***Adicionado Manipulador da Relação
