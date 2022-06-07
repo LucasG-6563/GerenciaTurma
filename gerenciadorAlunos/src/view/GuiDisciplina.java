@@ -19,7 +19,8 @@ import model.TabelaDisciplina;
 import javax.swing.JScrollPane;
 import java.awt.Font;
 
-public class GuiDisciplina {
+@SuppressWarnings("serial")
+public class GuiDisciplina extends JFrame{
 
 	private JFrame frmDisciplina;
 	private JTextField txtCodigo;

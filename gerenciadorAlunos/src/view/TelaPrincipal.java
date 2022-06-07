@@ -1,25 +1,16 @@
 package view;
 
 import java.awt.EventQueue;
-import java.awt.Font;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.ListSelectionModel;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 
 public class TelaPrincipal {
 
 	public static final String[] colunas = {"Nome","RA","Ano","Exatas","Humanas","Natureza"};
 	JFrame frmPrincipal;
-	private DefaultTableModel tbModelo = new DefaultTableModel(colunas, 0);
-	private JTable tbAlunos = new JTable(tbModelo);
 
 	/**
 	 * Launch the application.
@@ -55,117 +46,77 @@ public class TelaPrincipal {
 		frmPrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmPrincipal.getContentPane().setLayout(null);
 		
-		
-		tbAlunos = new JTable(tbModelo);
-		tbAlunos.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
+		JButton btnProfessor = new JButton("Professores");
+		btnProfessor.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				GuiProfessor tela = new GuiProfessor();
+				tela.setVisible(true);
 			}
 		});
-		tbAlunos.setEnabled(true);
-		tbAlunos.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
-		tbAlunos.setCellSelectionEnabled(false);
-		tbAlunos.setBounds(206, 11, 488, 364);
-		frmPrincipal.getContentPane().add(tbAlunos);
+		btnProfessor.setBounds(35, 208, 186, 130);
+		frmPrincipal.getContentPane().add(btnProfessor);
 		
-		JLabel lblAluno = new JLabel("Aluno: ");
-		lblAluno.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblAluno.setBounds(10, 28, 43, 14);
-		frmPrincipal.getContentPane().add(lblAluno);
+		JButton btnTurma = new JButton("Turmas");
+		btnTurma.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				GuiTurma tela = new GuiTurma();
+				tela.setVisible(true);
+			}
+		});
+		btnTurma.setBounds(457, 77, 186, 130);
+		frmPrincipal.getContentPane().add(btnTurma);
 		
-		JLabel lblRA = new JLabel("RA: ");
-		lblRA.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblRA.setBounds(10, 53, 43, 14);
-		frmPrincipal.getContentPane().add(lblRA);
+		JButton btnAluno_Turma = new JButton("Alunos e Turmas");
+		btnAluno_Turma.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				GuiAluno_Turma tela = new GuiAluno_Turma();
+				tela.setVisible(true);
+			}
+		});
+		btnAluno_Turma.setBounds(244, 11, 186, 130);
+		frmPrincipal.getContentPane().add(btnAluno_Turma);
 		
-		JLabel lblSerieAluno = new JLabel("Ano: ");
-		lblSerieAluno.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblSerieAluno.setBounds(10, 78, 43, 14);
-		frmPrincipal.getContentPane().add(lblSerieAluno);
-		
-		JButton btnFechar = new JButton("Fechar");
-		btnFechar.setBounds(546, 386, 148, 44);
-		frmPrincipal.getContentPane().add(btnFechar);
-		
-		JButton btnDeletar = new JButton("Deletar");
-		btnDeletar.setBounds(377, 386, 148, 44);
-		frmPrincipal.getContentPane().add(btnDeletar);
-		
-		JButton btnAtualizar = new JButton("Atualizar");
-		btnAtualizar.setBounds(206, 386, 148, 44);
-		frmPrincipal.getContentPane().add(btnAtualizar);
-		
-		JLabel lblExatas = new JLabel("Exatas: ");
-		lblExatas.setBounds(10, 175, 43, 14);
-		frmPrincipal.getContentPane().add(lblExatas);
-		
-		JLabel lblHumanas = new JLabel("Humanas: ");
-		lblHumanas.setBounds(10, 200, 51, 14);
-		frmPrincipal.getContentPane().add(lblHumanas);
-		
-		JLabel lblNewLabel_3_2 = new JLabel("Natureza: ");
-		lblNewLabel_3_2.setBounds(10, 225, 51, 14);
-		frmPrincipal.getContentPane().add(lblNewLabel_3_2);
-		
-		JButton btnAdicionar = new JButton("Adicionar");
+		JButton btnAdicionar = new JButton("Alunos");
 		btnAdicionar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				tbModelo.addRow(
-						new Object[] {
-								"Lucas",
-								"1050482113046",
-								"3º Semestre",
-								"9",
-								"7",
-								"8"
-						});
-				tbModelo.addRow(
-						new Object[] {
-								"Lucas",
-								"1050482113046",
-								"3º Semestre",
-								null,
-								"7",
-								"8"
-						});
-				tbModelo.addRow(
-						new Object[] {
-								"Lucas",
-								"1050482113046",
-								"3º Semestre",
-								"9",
-								"7",
-								null
-						});
 				
+				GuiAluno tela = new GuiAluno();
+				tela.setVisible(true);;
 			}
-		});
-		btnAdicionar.setBounds(10, 386, 186, 44);
+			
+			});
+		btnAdicionar.setBounds(35, 77, 186, 130);
 		frmPrincipal.getContentPane().add(btnAdicionar);
 		
-		JLabel lblNomeAluno = new JLabel("New label");
-		lblNomeAluno.setBounds(63, 30, 46, 14);
-		frmPrincipal.getContentPane().add(lblNomeAluno);
+		JButton btnProfessor_Disciplina = new JButton("Professores e Disciplinas");
+		btnProfessor_Disciplina.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				GuiProfessor_Disciplina tela = new GuiProfessor_Disciplina();
+				tela.setVisible(true);
+			}
+		});
+		btnProfessor_Disciplina.setBounds(244, 300, 186, 130);
+		frmPrincipal.getContentPane().add(btnProfessor_Disciplina);
 		
-		JLabel lblRaAluno = new JLabel("New label");
-		lblRaAluno.setBounds(63, 55, 46, 14);
-		frmPrincipal.getContentPane().add(lblRaAluno);
+		JButton btnDisciplina = new JButton("Disciplinas");
+		btnDisciplina.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				GuiDisciplina tela = new GuiDisciplina();
+				tela.setVisible(true);
+			}
+		});
+		btnDisciplina.setBounds(457, 208, 186, 130);
+		frmPrincipal.getContentPane().add(btnDisciplina);
 		
-		JLabel lblAnoAluno = new JLabel("New label");
-		lblAnoAluno.setBounds(63, 80, 46, 14);
-		frmPrincipal.getContentPane().add(lblAnoAluno);
-		
-		JLabel lblNotaExatas = new JLabel("New label");
-		lblNotaExatas.setBounds(63, 175, 46, 14);
-		frmPrincipal.getContentPane().add(lblNotaExatas);
-		
-		JLabel lblNotaHumanas = new JLabel("New label");
-		lblNotaHumanas.setBounds(63, 200, 46, 14);
-		frmPrincipal.getContentPane().add(lblNotaHumanas);
-		
-		JLabel lblNotaNatureza = new JLabel("New label");
-		lblNotaNatureza.setBounds(63, 225, 46, 14);
-		frmPrincipal.getContentPane().add(lblNotaNatureza);
+		JButton btnRelacao = new JButton("Rela\u00E7\u00E3o");
+		btnRelacao.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				GuiRelacao tela = new GuiRelacao();
+				tela.setVisible(true);
+			}
+		});
+		btnRelacao.setBounds(244, 152, 186, 130);
+		frmPrincipal.getContentPane().add(btnRelacao);
 		
 	}
 }

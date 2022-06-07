@@ -19,7 +19,8 @@ import model.TabelaTurma;
 import javax.swing.JScrollPane;
 import java.awt.Font;
 
-public class GuiTurma {
+@SuppressWarnings("serial")
+public class GuiTurma extends JFrame{
 
 	private JFrame frmTurma;
 	private JTextField txtCodigo;
