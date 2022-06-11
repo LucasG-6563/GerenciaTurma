@@ -1,14 +1,14 @@
 # GerenciaTurma
 Gerenciador de turmas de uma escola
 *Necessário instalar o WindowBuilder no eclipse para utilizar as telas
-## Verção 0.8
+## Versão 0.8
 ### Adição da tela de Consulta personalizada para a tabela Relacao
 #### Adição das seguintes classes
 - ConsultaRelacao
 - ConsultaRelacaoDAO
 - TabelaConsultaRelacao
 
-## Verção 0.7.7
+## Versão 0.7.7
 
 ### Telas refeitas para JFrame (v0.7.6 - Window)
 - GuiTurma
@@ -21,7 +21,7 @@ Gerenciador de turmas de uma escola
 - Codificação
 - Adição do método atualizaTabela, para atualizar a tabela relação ao executar os comandos Inserir, Alterar e deletar.
 
-## Verção 0.7.6
+## Versão 0.7.6
 
 ### Correção da forma que foi criado as telas
 - De Window para Frame - Turma e Disciplina
@@ -30,7 +30,7 @@ Gerenciador de turmas de uma escola
 
 ### Alteração do layout da Tela Principal e correção de bugs das telas GuiTurma e GuiDisciplina
 
-## Verção 0.7
+## Versão 0.7
 
 ### Adicionado Manipulador da Relação
 - Classes Relacao, RelacaoDAO, tabelaRelacao
@@ -39,7 +39,7 @@ Gerenciador de turmas de uma escola
 
 ### Adicionado o comando de listar apenas o nome para o professor e disciplina
 
-## Verção 0.6
+## Versão 0.6
 
 ### Adição do Manipulador Aluno_Turma
 - GuiAluno_Turma
@@ -48,7 +48,7 @@ Gerenciador de turmas de uma escola
 - Classe TabelaAluno_Turma
 - Classe TabelaAlunoMini
 
-## Verção 0.5
+## Versão 0.5
 
 ### Adição do manipulador do aluno
 - GuiAluno
