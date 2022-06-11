@@ -1,6 +1,12 @@
 # GerenciaTurma
 Gerenciador de turmas de uma escola
 *Necessário instalar o WindowBuilder no eclipse para utilizar as telas
+## Verção 0.8
+### Adição da tela de Consulta personalizada para a tabela Relacao
+#### Adição das seguintes classes
+- ConsultaRelacao
+- ConsultaRelacaoDAO
+- TabelaConsultaRelacao
 
 ## Verção 0.7.7
 
@@ -14,9 +20,6 @@ Gerenciador de turmas de uma escola
 ### Modificado algumas partes da relação
 - Codificação
 - Adição do método atualizaTabela, para atualizar a tabela relação ao executar os comandos Inserir, Alterar e deletar.
-
-### Pendente
-- Adicionar tela de consulta mais profunda para relação.
 
 ## Verção 0.7.6
 
