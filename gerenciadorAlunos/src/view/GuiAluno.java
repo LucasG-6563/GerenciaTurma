@@ -60,8 +60,9 @@ public class GuiAluno extends JFrame {
 	 */
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public GuiAluno() {
+		setTitle("Alunos");
 
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setBounds(100, 100, 1280, 720);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -74,7 +75,7 @@ public class GuiAluno extends JFrame {
 		panel.setLayout(null);
 
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(471, 0, 793, 681);
+		scrollPane.setBounds(471, 0, 783, 681);
 		panel.add(scrollPane);
 
 		tbAluno = new JTable();

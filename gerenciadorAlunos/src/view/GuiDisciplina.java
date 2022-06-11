@@ -51,6 +51,7 @@ public class GuiDisciplina extends JFrame {
 	 * Create the frame.
 	 */
 	public GuiDisciplina() {
+		setTitle("Disciplinas");
 		
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setBounds(100, 100, 1280, 720);
