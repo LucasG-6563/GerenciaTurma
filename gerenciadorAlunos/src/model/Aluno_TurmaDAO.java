@@ -45,7 +45,7 @@ public class Aluno_TurmaDAO {
 
 		try {
 			banco.st = banco.con.prepareStatement(sql);
-			banco.st.setInt(4, d.getCod_alum_turm());
+			banco.st.setInt(4, d.getCod_alun_turm());
 			banco.st.setInt(1, d.getRa_aluno());
 			banco.st.setInt(2, d.getCod_turma());
 			banco.st.setInt(3, d.getAno());
@@ -73,7 +73,7 @@ public class Aluno_TurmaDAO {
 			bd.rs = bd.st.executeQuery();
 			while (bd.rs.next()) { // enquanto existir próximo
 				d = new Aluno_Turma();
-				d.setCod_alum_turm(bd.rs.getInt("cod_alun_turm"));
+				d.setCod_alun_turm(bd.rs.getInt("cod_alun_turm"));
 				d.setRa_aluno(bd.rs.getInt("ra_aluno"));
 				d.setCod_turma(bd.rs.getInt("cod_turma"));
 				d.setAno(bd.rs.getInt("ano"));

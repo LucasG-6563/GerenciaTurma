@@ -5,24 +5,24 @@ import java.util.ArrayList;
 import javax.swing.table.AbstractTableModel;
 
 @SuppressWarnings("serial")
-public class TabelaAluno_Turma extends AbstractTableModel{
+public class TabelaConsultaRelacao extends AbstractTableModel{
 
-	private ArrayList<Aluno_Turma> tabela;
-	private String[] colunas = {"Codigo","RA Aluno","Codigo Turma","Ano"};
+	private ArrayList<ConsultaRelacao> tabela;
+	private String[] colunas = {"Codigo Relação","Professor","Disciplina","Turma","Periodo","Ano"};
 	
 	
-	public TabelaAluno_Turma() {
+	public TabelaConsultaRelacao() {
 		this.tabela = new ArrayList<>();
 	}
 	
-	public void addAluno_Turma(Aluno_Turma d) {
-		tabela.add(d);
+	public void addConsultaRelacao(ConsultaRelacao cr) {
+		tabela.add(cr);
 	}
 	public void cleanTabela() {
 		tabela.clear();
 	}
 	
-	public Aluno_Turma getAluno_Turma(int linha) {
+	public ConsultaRelacao getConsultaRelacao(int linha) {
 		return this.tabela.get(linha);
 	}
 	@Override
@@ -41,12 +41,16 @@ public class TabelaAluno_Turma extends AbstractTableModel{
 	public Object getValueAt(int rowIndex, int columnIndex) {
 		switch(columnIndex) {
 		case 0:
-			return this.tabela.get(rowIndex).getCod_alun_turm();
+			return this.tabela.get(rowIndex).getCod_relacao();
 		case 1:
-			return this.tabela.get(rowIndex).getRa_aluno();
+			return this.tabela.get(rowIndex).getNomeProfessor();
 		case 2:
-			return this.tabela.get(rowIndex).getCod_turma();
+			return this.tabela.get(rowIndex).getDisciplina();
 		case 3:
+			return this.tabela.get(rowIndex).getTurma();
+		case 4:
+			return this.tabela.get(rowIndex).getPeriodo();
+		case 5:
 			return this.tabela.get(rowIndex).getAno();
 		default:
 			return this.tabela.get(rowIndex);

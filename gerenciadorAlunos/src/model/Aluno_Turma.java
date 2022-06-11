@@ -2,16 +2,16 @@ package model;
 
 public class Aluno_Turma {
 
-	private int cod_alum_turm;
+	private int cod_alun_turm;
 	private int ra_aluno;
 	private int cod_turma;
 	private int ano;
 	
-	public int getCod_alum_turm() {
-		return cod_alum_turm;
+	public int getCod_alun_turm() {
+		return cod_alun_turm;
 	}
-	public void setCod_alum_turm(int cod_alum_turm) {
-		this.cod_alum_turm = cod_alum_turm;
+	public void setCod_alun_turm(int cod_alum_turm) {
+		this.cod_alun_turm = cod_alum_turm;
 	}
 	public int getRa_aluno() {
 		return ra_aluno;
