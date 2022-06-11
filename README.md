@@ -2,6 +2,24 @@
 Gerenciador de turmas de uma escola
 *Necessário instalar o WindowBuilder no eclipse para utilizar as telas
 
+*Verção 0.7.7
+
+Telas refeitas para JFrame (v0.7.6 - Window)
+
+- GuiTurma
+- GuiAluno_Turma
+- GuiDisciplina
+- GuiProfessor_Disciplina
+- Relação
+
+Modificado algumas partes da relação
+
+- Codificação
+- Adição do método atualizaTabela, para atualizar a tabela relação ao executar os comandos Inserir, Alterar e deletar.
+
+Pendente
+
+- Adicionar tela de consulta mais profunda para relação.
 *Verção 0.7.6
 
 *Correção da forma que foi criado as telas
