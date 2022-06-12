@@ -85,7 +85,7 @@ public class GuiDisciplina extends JFrame {
 		lblNome.setBounds(10, 78, 65, 37);
 		panel.add(lblNome);
 
-		JLabel lblEndereco = new JLabel("Per\u00EDodo");
+		JLabel lblEndereco = new JLabel("\u00C1rea");
 		lblEndereco.setFont(new Font("Arial", Font.PLAIN, 20));
 		lblEndereco.setBounds(10, 156, 72, 37);
 		panel.add(lblEndereco);

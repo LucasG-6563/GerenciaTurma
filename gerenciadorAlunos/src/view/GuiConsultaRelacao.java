@@ -55,7 +55,7 @@ public class GuiConsultaRelacao extends JFrame {
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public GuiConsultaRelacao() {
 		setTitle("Consulta das Rela\u00E7\u00F5es");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setBounds(100, 100, 960, 720);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -161,6 +161,9 @@ public class GuiConsultaRelacao extends JFrame {
 		JButton btnConsultar = new JButton("CONSULTAR");
 		btnConsultar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				modeloTabela.cleanTabela();
+				
 				ConsultaRelacao cr = new ConsultaRelacao();
 				ConsultaRelacao aux;
 				ConsultaRelacaoDAO crDAO = new ConsultaRelacaoDAO();

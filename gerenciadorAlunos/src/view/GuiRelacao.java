@@ -75,6 +75,7 @@ public class GuiRelacao extends JFrame {
 			d.setCod_relacao(lista.get(i).getCod_relacao());
 			d.setCod_prof_disc(lista.get(i).getCod_prof_disc());
 			d.setCod_turma(lista.get(i).getCod_turma());
+			d.setAno(lista.get(i).getAno());
 
 			modeloTabela.addRelacao(d);
 		}
@@ -130,6 +131,12 @@ public class GuiRelacao extends JFrame {
 		panel.add(txtCodigoRelacao);
 		txtCodigoRelacao.setColumns(10);
 
+		JComboBox cbAno = new JComboBox();
+		cbAno.setFont(new Font("Arial", Font.PLAIN, 20));
+		cbAno.setModel(new DefaultComboBoxModel(Datas.getAno()));
+		cbAno.setBounds(66, 208, 84, 32);
+		panel.add(cbAno);
+		
 		JButton btnIncluir = new JButton("Incluir");
 		btnIncluir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -138,6 +145,7 @@ public class GuiRelacao extends JFrame {
 
 				d.setCod_prof_disc(Integer.parseInt(txtCodProfDisc.getText()));
 				d.setCod_turma(Integer.parseInt(txtCodTurma.getText()));
+				d.setAno(Integer.parseInt(cbAno.getSelectedItem().toString()));
 
 				dDAO.inserir(d);
 
@@ -172,16 +180,17 @@ public class GuiRelacao extends JFrame {
 		btnAlterar.setBounds(236, 268, 225, 185);
 		panel.add(btnAlterar);
 
-		JButton btnListar = new JButton("Listar");
-		btnListar.addActionListener(new ActionListener() {
+		JButton btnConsultar = new JButton("Consultar");
+		btnConsultar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				atualizaTabela();
+				GuiConsultaRelacao tela = new GuiConsultaRelacao();
+				tela.setVisible(true);
 			}
 		});
-		btnListar.setFont(new Font("Arial", Font.PLAIN, 26));
-		btnListar.setBounds(10, 453, 225, 217);
-		panel.add(btnListar);
+		btnConsultar.setFont(new Font("Arial", Font.PLAIN, 26));
+		btnConsultar.setBounds(10, 453, 225, 217);
+		panel.add(btnConsultar);
 
 		JButton btnDeletar = new JButton("Deletar");
 		btnDeletar.addActionListener(new ActionListener() {
@@ -236,12 +245,6 @@ public class GuiRelacao extends JFrame {
 		lblEndereco_1.setBounds(10, 208, 46, 37);
 		panel.add(lblEndereco_1);
 
-		JComboBox cbAno = new JComboBox();
-		cbAno.setFont(new Font("Arial", Font.PLAIN, 20));
-		cbAno.setModel(new DefaultComboBoxModel(Datas.getAno()));
-		cbAno.setBounds(66, 208, 84, 32);
-		panel.add(cbAno);
-
 		Professor_DisciplinaDAO pDAO = new Professor_DisciplinaDAO();
 		Professor_Disciplina p;
 		ArrayList<Professor_Disciplina> lista = pDAO.listarTodos();
@@ -267,6 +270,8 @@ public class GuiRelacao extends JFrame {
 			modeloTurma.addTurma(d);
 		}
 		modeloProfDisc.fireTableDataChanged();
+		
+		atualizaTabela();
 	}
 
 }
