@@ -2,7 +2,6 @@
 Gerenciador de turmas de uma escola
 *Necessário instalar o WindowBuilder no eclipse para utilizar as telas
 ## Versão 0.9
-v0.9
 ### Adicionado uma classe para fazer os logs
 - Classe Espiao
 
