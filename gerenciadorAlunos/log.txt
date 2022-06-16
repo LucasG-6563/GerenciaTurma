@@ -1,0 +1,108 @@
+Usuário abriu o programa.
+Usuário cadastrou dados na tabela Aluno.
+Usuário alterou dados da tabela Aluno.
+Usuário abriu o programa.
+Usuário cadastrou dados na tabela Aluno.
+Usuário abriu o programa.
+Usuário cadastrou dados na tabela Aluno.
+Usuário alterou dados da tabela Aluno.
+Usuário deletou dados da tabela Aluno.
+Usuário cadastrou dados na tabela Turma.
+Usuário abriu o programa.
+Usuário abriu o programa.
+Usuário abriu o programa.
+Usuário cadastrou dados na tabela Aluno.
+Usuário alterou dados da tabela Aluno.
+Usuário deletou dados da tabela Aluno.
+Usuário cadastrou dados na tabela Professor.
+Usuário alterou dados da tabela Professor.
+Usuário deletou dados da tabela Professor.
+Usuário cadastrou dados na tabela Turma.
+Usuário alterou dados da tabela Relacao.
+Usuário abriu o programa.
+Usuário cadastrou dados na tabela Turma.
+Usuário alterou dados da tabela Relacao.
+Usuário abriu o programa.
+Usuário cadastrou dados na tabela Turma.
+Usuário alterou dados da tabela Relacao.
+Usuário abriu o programa.
+Usuário deletou dados da tabela Relacao.
+Usuário abriu o programa.
+Usuário deletou dados da tabela Relacao.
+Usuário abriu o programa.
+Usuário cadastrou dados na tabela Turma.
+Usuário alterou dados da tabela Relacao.
+Usuário abriu o programa.
+Usuário cadastrou dados na tabela Turma.
+Usuário alterou dados da tabela Relacao.
+Usuário deletou dados da tabela Relacao.
+Usuário cadastrou dados na tabela Disciplina.
+Usuário abriu o programa.
+Usuário cadastrou dados na tabela Disciplina.
+Usuário alterou dados da tabela Disciplina.
+Usuário deletou dados da tabela Disciplina.
+Usuário cadastrou dados na tabela Aluno_Turma.
+Usuário abriu o programa.
+Usuário alterou dados da tabela Relacao.
+Usuário deletou dados da tabela Relacao.
+Usuário cadastrou dados na tabela Disciplina.
+Usuário alterou dados da tabela Disciplina.
+Usuário deletou dados da tabela Disciplina.
+Usuário alterou dados da tabela Professor_Disciplina.
+Usuário alterou dados da tabela Professor_Disciplina.
+Usuário abriu o programa.
+Usuário alterou dados da tabela Professor_Disciplina.
+Usuário abriu o programa.
+Usuário alterou dados da tabela Professor_Disciplina.
+Usuário alterou dados da tabela Professor_Disciplina.
+Usuário alterou dados da tabela Aluno_Turma.
+Usuário abriu o programa.
+Usuário cadastrou dados na tabela Aluno_Turma.
+Usuário alterou dados da tabela Aluno_Turma.
+Usuário abriu o programa.
+Usuário deletou dados da tabela Aluno_Turma.
+Usuário abriu o programa.
+Usuário abriu o programa.
+Usuário abriu o programa.
+Usuário abriu o programa.
+Usuário abriu o programa.
+Usuário alterou dados da tabela Aluno_Turma.
+Usuário cadastrou dados na tabela Aluno_Turma.
+Usuário deletou dados da tabela Aluno_Turma.
+Usuário cadastrou dados na tabela Professor_Disciplina.
+Usuário alterou dados da tabela Professor_Disciplina.
+Usuário deletou dados da tabela Professor_Disciplina.
+Usuário cadastrou dados na tabela Relacao.
+Usuário alterou dados da tabela Relacao.
+Usuário deletou dados da tabela Relacao.
+Usuário consultou dados da tabela relacao.
+Usuário consultou dados da tabela relacao.
+Usuário consultou dados da tabela relacao.
+Usuário consultou dados da tabela relacao.
+Usuário consultou dados da tabela relacao.
+Usuário consultou dados da tabela relacao.
+Usuário consultou dados da tabela relacao.
+Usuário consultou dados da tabela relacao.
+Usuário consultou dados da tabela relacao.
+Usuário consultou dados da tabela relacao.
+Usuário consultou dados da tabela relacao.
+Usuário abriu o programa.
+Usuário cadastrou dados na tabela Relacao.
+Usuário abriu o programa.
+Usuário abriu o programa.
+Usuário cadastrou dados na tabela Relacao.
+Usuário alterou dados da tabela Relacao.
+Usuário deletou dados da tabela Relacao.
+Usuário consultou dados da tabela relacao.
+Usuário consultou dados da tabela relacao.
+Usuário consultou dados da tabela relacao.
+Usuário consultou dados da tabela relacao.
+Usuário consultou dados da tabela relacao.
+Usuário consultou dados da tabela relacao.
+Usuário consultou dados da tabela relacao.
+Usuário consultou dados da tabela relacao.
+Usuário consultou dados da tabela relacao.
+Usuário consultou dados da tabela relacao.
+Usuário consultou dados da tabela relacao.
+Usuário consultou dados da tabela relacao.
+Usuário consultou dados da tabela relacao.
