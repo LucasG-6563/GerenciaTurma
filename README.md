@@ -1,6 +1,23 @@
 # GerenciaTurma
 Gerenciador de turmas de uma escola
 *Necessário instalar o WindowBuilder no eclipse para utilizar as telas
+## Versão 0.9
+v0.9
+### Adicionado uma classe para fazer os logs
+- Classe Espiao
+
+### Removido erros de execução no método alterar
+- Aluno_Turma
+- Professor_Disciplina
+- Relacao
+
+### Corrigido problema do método Listar
+- Aluno_Turma
+- Professor_Disciplina
+- Relacao
+
+### Adição do script do DataBase e Arquivo Log
+
 ## Versão 0.8.1
 ### Correção de bugs que ocorriam em algumas telas
 - Não pegar os dados digitados
