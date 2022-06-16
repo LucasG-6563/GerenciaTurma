@@ -131,8 +131,8 @@ public class GuiProfessor_Disciplina extends JFrame {
 				Professor_DisciplinaDAO dDAO = new Professor_DisciplinaDAO();
 
 				d.setCod(Integer.parseInt(txtCodigo.getText()));
-				d.setIdProfessor(Integer.parseInt(txtCodigo.getText()));
-				d.setCodDisciplina(Integer.parseInt(txtCodigo.getText()));
+				d.setIdProfessor(Integer.parseInt(txtRaProfessor.getText()));
+				d.setCodDisciplina(Integer.parseInt(txtCodDisciplina.getText()));
 
 				dDAO.alterar(d);
 

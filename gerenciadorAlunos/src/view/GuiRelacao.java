@@ -166,8 +166,9 @@ public class GuiRelacao extends JFrame {
 				RelacaoDAO dDAO = new RelacaoDAO();
 
 				d.setCod_relacao(Integer.parseInt(txtCodigoRelacao.getText()));
-				d.setCod_prof_disc(Integer.parseInt(txtCodigoRelacao.getText()));
-				d.setCod_turma(Integer.parseInt(txtCodigoRelacao.getText()));
+				d.setCod_prof_disc(Integer.parseInt(txtCodProfDisc.getText()));
+				d.setCod_turma(Integer.parseInt(txtCodTurma.getText()));
+				d.setAno(Integer.parseInt(cbAno.getSelectedItem().toString()));
 
 				dDAO.alterar(d);
 

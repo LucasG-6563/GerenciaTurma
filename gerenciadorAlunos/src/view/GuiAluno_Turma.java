@@ -109,6 +109,12 @@ public class GuiAluno_Turma extends JFrame {
 		panel.add(txtCodigo);
 		txtCodigo.setColumns(10);
 
+		JComboBox cbAno = new JComboBox();
+		cbAno.setFont(new Font("Arial", Font.PLAIN, 20));
+		cbAno.setModel(new DefaultComboBoxModel(Datas.getAno()));
+		cbAno.setBounds(66, 208, 84, 32);
+		panel.add(cbAno);
+		
 		JButton btnIncluir = new JButton("Incluir");
 		btnIncluir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -117,6 +123,7 @@ public class GuiAluno_Turma extends JFrame {
 
 				d.setRa_aluno(Integer.parseInt(txtRaAluno.getText()));
 				d.setCod_turma(Integer.parseInt(txtCodTurma.getText()));
+				d.setAno(Integer.parseInt(cbAno.getSelectedItem().toString()));
 
 				dDAO.inserir(d);
 
@@ -135,8 +142,9 @@ public class GuiAluno_Turma extends JFrame {
 				Aluno_TurmaDAO dDAO = new Aluno_TurmaDAO();
 
 				d.setCod_alun_turm(Integer.parseInt(txtCodigo.getText()));
-				d.setRa_aluno(Integer.parseInt(txtCodigo.getText()));
-				d.setCod_turma(Integer.parseInt(txtCodigo.getText()));
+				d.setRa_aluno(Integer.parseInt(txtRaAluno.getText()));
+				d.setCod_turma(Integer.parseInt(txtCodTurma.getText()));
+				d.setAno(Integer.parseInt(cbAno.getSelectedItem().toString()));
 
 				dDAO.alterar(d);
 
@@ -162,6 +170,7 @@ public class GuiAluno_Turma extends JFrame {
 					d.setCod_alun_turm(lista.get(i).getCod_alun_turm());
 					d.setRa_aluno(lista.get(i).getRa_aluno());
 					d.setCod_turma(lista.get(i).getCod_turma());
+					d.setAno(lista.get(i).getAno());
 
 					modeloTabela.addAluno_Turma(d);
 				}
@@ -223,12 +232,6 @@ public class GuiAluno_Turma extends JFrame {
 		lblEndereco_1.setFont(new Font("Arial", Font.PLAIN, 20));
 		lblEndereco_1.setBounds(10, 208, 46, 37);
 		panel.add(lblEndereco_1);
-
-		JComboBox cbAno = new JComboBox();
-		cbAno.setFont(new Font("Arial", Font.PLAIN, 20));
-		cbAno.setModel(new DefaultComboBoxModel(Datas.getAno()));
-		cbAno.setBounds(66, 208, 84, 32);
-		panel.add(cbAno);
 
 		AlunoDAO pDAO = new AlunoDAO();
 		Aluno p;

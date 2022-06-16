@@ -215,7 +215,7 @@ public class GuiProfessor extends JFrame {
 					p.setRg(txtRG.getText());
 
 					pDAO.alterar(p);
-					JOptionPane.showMessageDialog(btnAlterar, "Professor inserida com sucesso");
+					JOptionPane.showMessageDialog(btnAlterar, "Professor alterado com sucesso");
 				} catch (Exception e1) {
 					System.out.println(e1);
 				}

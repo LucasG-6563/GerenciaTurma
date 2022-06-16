@@ -4,6 +4,9 @@ import java.awt.EventQueue;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+
+import services.Espiao;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -45,6 +48,8 @@ public class TelaPrincipal {
 		frmPrincipal.setBounds(100, 100, 720, 480);
 		frmPrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmPrincipal.getContentPane().setLayout(null);
+		
+		Espiao.writeln("Usuário abriu o programa.");
 		
 		JButton btnProfessor = new JButton("Professores");
 		btnProfessor.addActionListener(new ActionListener() {

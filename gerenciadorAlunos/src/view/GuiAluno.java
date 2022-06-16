@@ -223,7 +223,7 @@ public class GuiAluno extends JFrame {
 					p.setRgResp(txtRgResp.getText());
 
 					pDAO.alterar(p);
-					JOptionPane.showMessageDialog(btnAlterar, "Aluno inserida com sucesso");
+					JOptionPane.showMessageDialog(btnAlterar, "Aluno alterado com sucesso");
 				} catch (Exception e1) {
 					System.out.println(e1);
 				}
@@ -276,7 +276,7 @@ public class GuiAluno extends JFrame {
 				AlunoDAO dDAO = new AlunoDAO();
 
 				dDAO.delete(Integer.parseInt(ftfId.getText()));
-				JOptionPane.showMessageDialog(btnIncluir, "Aluno deletada com sucesso");
+				JOptionPane.showMessageDialog(btnIncluir, "Aluno deletado com sucesso");
 			}
 		});
 		btnDeletar.setFont(new Font("Arial", Font.PLAIN, 26));
